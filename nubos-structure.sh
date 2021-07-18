@@ -12,6 +12,7 @@ ricing () {
 
 	echo " -- STAGE 2 - MAKING CONFIG DIRECTORIES -- "
 	echo
+	mkdir ~/.config/
 	echo " Stage 2 - part 1/7	Creating bspwm      config directory"
 	mkdir ~/.config/bspwm
 	echo " Stage 2 - part 2/7	Creating sxhkd      config directory"
