@@ -6,7 +6,7 @@ ricing () {
 
 	# Config dirs
 	echo " -- STAGE 1 - INSTALLING SOFTWARE       -- "
-	sudo /bin/pacman -S bspwm sxhkd Xorg xinit alacritty zsh ranger vim htop tty-clock nemo sxiv vlc picom qutebrowser nitrogen
+	sh ./pkg.sh
 	echo " - Finished STAGE 1 - "
 
 
