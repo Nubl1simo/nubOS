@@ -30,6 +30,7 @@ ricing () {
 	# Creating configs
 	echo " -- STAGE 3 - GENERATING CONFIG FILES -- "
 	git clone https://github.com/nubl1simo/dotfiles/
+	cd dotfiles
 	#.zshrc alacritty.yml bspwmrc htoprc sxhkdrc nitrogen .cfg picom.conf vimrc
 	mv .zshrc ~/
 	echo " Stage 3 - part 1/7	Generated zsh       config file." 
@@ -53,7 +54,7 @@ ricing () {
 	echo bspwm > ~/.xinitrc
 	echo picom > ~/.xinitrc
 	nitrogen --set-zoom-fill --random ~/dotfiles/nord-wallpapers-i-like/ --save
-
+}
 
 isUserSure () {		#function for asking if user is sure
 	echo "Are you sure you want to run this script, this script will install the following software, and the binaries required to run them."
@@ -72,6 +73,7 @@ isUserSure () {		#function for asking if user is sure
 	case "$ISUSERSURE" in
 		[yY] | [yY][eE][sS])
 			echo "Great, the installation will proceed."
+			ricing
 			;;
 		[nN] | [nN][oO])
 			echo "Halting installation."
