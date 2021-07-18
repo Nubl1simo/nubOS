@@ -6,27 +6,29 @@ ricing () {
 
 	# Config dirs
 	echo " -- STAGE 1 - INSTALLING SOFTWARE       -- "
-	sudo pacman -S bspwm sxhkd Xorg xinit alacritty zsh ranger vim htop tty-clock nemo sxiv vlc nitrogen picom qutebrowser
+	sudo /bin/pacman -S bspwm sxhkd Xorg xinit alacritty zsh ranger vim htop tty-clock nemo sxiv vlc picom qutebrowser nitrogen
 	echo " - Finished STAGE 1 - "
 
 
 	echo " -- STAGE 2 - MAKING CONFIG DIRECTORIES -- "
 	echo
 	mkdir ~/.config/
-	echo " Stage 2 - part 1/7	Creating bspwm      config directory"
+	echo " Stage 2 - part 1/8	Creating bspwm      config directory"
 	mkdir ~/.config/bspwm
-	echo " Stage 2 - part 2/7	Creating sxhkd      config directory"
+	echo " Stage 2 - part 2/8	Creating sxhkd      config directory"
 	mkdir ~/.config/sxhkd
-	echo " Stage 2 - part 3/7	Creating htop       config directory"
+	echo " Stage 2 - part 3/8	Creating htop       config directory"
 	mkdir ~/.config/htop
-	echo " Stage 2 - part 4/7	Creating picom      config directory"
+	echo " Stage 2 - part 4/8	Creating picom      config directory"
 	mkdir ~/.config/picom
-	echo " Stage 2 - part 5/7	Creating alacritty  config directory"
+	echo " Stage 2 - part 5/8	Creating alacritty  config directory"
 	mkdir ~/.config/alacritty
-	echo " Stage 2 - part 6/7	Creating picom      config directory"
+	echo " Stage 2 - part 6/8	Creating picom      config directory"
 	mkdir ~/.config/picom
-	echo " Stage 2 - part 7/7	Creating vim        config directory"
+	echo " Stage 2 - part 7/8	Creating vim        config directory"
 	mkdir ~/.config/vim
+	echo " Stage 2 - part 8/8	Creating vim        config directory"
+	mkdir ~/.config/nitrogen
 
 	# Creating configs
 	echo " -- STAGE 3 - GENERATING CONFIG FILES -- "
@@ -54,7 +56,7 @@ ricing () {
 	cp /etc/X11/xinit/xinitrc ~/.xinitrc
 	echo bspwm > ~/.xinitrc
 	echo picom > ~/.xinitrc
-	nitrogen --set-zoom-fill --random ~/dotfiles/nord-wallpapers-i-like/ --save
+	echo "nitrogen --set-zoom-fill --random ~/dotfiles/nord-wallpapers-i-like/ --save" > ~/.xinitrc
 }
 
 isUserSure () {		#function for asking if user is sure
